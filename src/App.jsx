@@ -1,34 +1,136 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Modal from "./components/modal"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <main className="flex flex-col justify-center items-center ">
+      <Modal>
+        <Modal.Trigger>
+          <button>Botão</button>
+        </Modal.Trigger>
+        <Modal.Panel className="bg-white h-[11rem] max-h-[85rem] w-[30rem] max-w-[450rem] rounded-md">
+          <Modal.Content className="flex flex-col justify-center items-center pt-4 gap-4">
+            <div className="select-none items-center justify-between md:flex gap-[14rem] text-2xl">
+              <h2 className="text-left">Deseja prosseguir?</h2>
+              <Modal.Close className="p-1 px-2 rounded-full bg-zinc-200 hover:bg-zinc-400 text-sm">
+                X
+              </Modal.Close>
+            </div>
+            <p className="text-center">
+              A função que deseja efetuar será irrevesível após a confirmação, tenha certeza do que está fazendo antes de finalizar.
+            </p>
+            <div className="flex flex-row justify-end items-center gap-2">
+              <Modal.Cancel className="bg-red-200 border-red-500 border p-2 hover:bg-red-400 transition-colors duration-200">
+                Cancelar
+              </Modal.Cancel>
+              <Modal.Submit className="bg-green-200 border-green-500 border p-2 hover:bg-green-400 transition-colors duration-200">
+                Confirmar
+              </Modal.Submit>
+            </div>
+          </Modal.Content>
+        </Modal.Panel>
+      </Modal>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius nemo dolores quaerat vel. Quo repellendus accusantium libero, nemo non facere tenetur enim autem optio. Eius officia quos explicabo recusandae?
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
   )
 }
 
