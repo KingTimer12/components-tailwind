@@ -8,13 +8,8 @@ function App() {
           <button>Botão</button>
         </Modal.Trigger>
         <Modal.Panel className="bg-white h-[11rem] max-h-[85rem] w-[30rem] max-w-[450rem] rounded-md">
-          <Modal.Content className="flex flex-col justify-center items-center pt-4 gap-4">
-            <div className="select-none items-center justify-between md:flex gap-[14rem] text-2xl">
-              <h2 className="text-left">Deseja prosseguir?</h2>
-              <Modal.Close className="p-1 px-2 rounded-full bg-zinc-200 hover:bg-zinc-400 text-sm">
-                X
-              </Modal.Close>
-            </div>
+          <Modal.Content className="flex flex-col justify-center items-center pt-4 gap-3">
+            <h2 className="select-none text-left text-2xl">Deseja prosseguir?</h2>
             <p className="text-center">
               A função que deseja efetuar será irrevesível após a confirmação, tenha certeza do que está fazendo antes de finalizar.
             </p>
