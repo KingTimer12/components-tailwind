@@ -21,7 +21,7 @@ function ModalPanel({ removeScroll, children, ...props }) {
     return (
         <>
             {modal?.opened && (
-                <section className="">
+                <section className="flex justify-center items-center">
                     <RemoveScroll enabled={removeScroll}>
                         <div className="fixed inset-0 bg-zinc-700 opacity-40" onClick={handleModal} />
                     </RemoveScroll>
