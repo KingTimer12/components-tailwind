@@ -78,7 +78,7 @@ function ModalSubmit({ disabled, closeOnClick = false, children, ...props }) {
     }
 
     return (
-        <button data-disabled={disabled} {...props} onClick={handleModal} type="submit">
+        <button disabled={disabled} data-disabled={disabled} {...props} onClick={handleModal} type="submit">
             {children}
         </button>
     )
