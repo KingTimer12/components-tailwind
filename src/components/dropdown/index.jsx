@@ -3,11 +3,31 @@ import { useRef } from "react";
 import { useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
 
-const DropdownSearch = ({items}) => {
+const DropdownLoading = () => <p className="p-2 bg-gray-200">Carregando...</p>
+
+const DropdownSearch = ({data}) => {
   const [open, setOpen] = useState(false)
+  const [changing, setChanging] = useState(false)
   const [selected, setSelected] = useState({label: '', value: ''})
   const [search, setSearch] = useState('')
-  
+  const [items, setItems] = useState([])
+
+  useEffect(() => {
+    if (changing) {
+      setChanging(false)
+      return
+    }
+    if (items.length && search)
+      setItems([])
+    if (data && typeof data === 'function') {
+      data(search).then((res) => {
+        setItems(res)
+      })
+    } else if (data) {
+      setItems(data)
+    }
+  }, [changing])
+
   const inputRef = useRef(null)
   const divRef = useRef(null)
 
@@ -36,6 +56,7 @@ const DropdownSearch = ({items}) => {
         onChange={(e) => {
           setSearch(e.target.value.toLowerCase())
           setSelected(e.target.value)
+          setChanging(true)
         }}
       />
       <input
@@ -47,11 +68,11 @@ const DropdownSearch = ({items}) => {
       {open && (
         <RemoveScroll>
           <div ref={divRef} className="fixed flex flex-col bg-white shadow-lg w-[12%] mt-1 max-h-[20%] overflow-y-auto">
-            {items.filter(f => String(f.label).toLowerCase().indexOf(search) > -1).map((item, idx) => (<p onClick={() => {
+            {items.length ? items.filter(f => String(f.label).toLowerCase().indexOf(search) > -1).map((item, idx) => (<p onClick={() => {
               setSelected(item)
               setOpen(false)
               setSearch('')
-            }} key={idx} className="p-2 cursor-pointer hover:bg-gray-200">{item.label}</p>))}
+            }} key={idx} className="p-2 cursor-pointer hover:bg-gray-200">{item.label}</p>)) : <DropdownLoading />}
           </div>
         </RemoveScroll>
       )}
