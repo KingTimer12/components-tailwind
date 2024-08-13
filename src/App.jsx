@@ -1,8 +1,15 @@
+import DropdownSearch from "./components/dropdown"
 import Modal from "./components/modal"
 
 function App() {
   return (
     <main className="flex flex-col justify-center items-center ">
+    <DropdownSearch items={[
+      {value: 1, label: "Abacaxi"},
+      {value: 2, label: "Banana"},
+      {value: 3, label: "Avião"},
+      {value: 4, label: "Bola"},
+    ]} />
       <Modal>
         <Modal.Trigger className="p-2 bg-blue-200 border border-blue-400 hover:bg-blue-300 transition-colors duration-200 mt-1">
           Abrir Modal
