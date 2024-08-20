@@ -16,7 +16,7 @@
     "react-redux": "^9.1.2",
     "react-remove-scroll": "^2.5.10",
     "redux": "^5.0.1",
-    "simple-search-dropdown": "^0.1.5"
+    "simple-search-dropdown": "^0.1.7"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
