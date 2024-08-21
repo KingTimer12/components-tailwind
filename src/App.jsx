@@ -1,24 +1,13 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
-import { SearchSelect } from 'simple-search-dropdown'
+import { SearchSelect } from "simple-search-dropdown";
 
 function App() {
   const { handleSubmit, register } = useForm()
-  const promiseOptions = () =>
-    new Promise((resolve) => {
-      setTimeout(() => {
-        const data = [
-          {value: 1, label: "Abacaxi"},
-          {value: 2, label: "Banana"},
-          {value: 3, label: "Avião"},
-          {value: 4, label: "Bola"},
-          {value: 5, label: "Lula"},
-          {value: 6, label: "Faca"},
-          {value: 7, label: "Magnus"},
-          {value: 8, label: "Xadrez"},
-        ]
-        resolve(data);
-      }, 1000);
-    });
+  const promiseOptions = async (query) => {
+    const { data } = await axios.get(`https://ola-scrapper-to-precisando-de-gente-bora.slimeread.com:8443/book_search`, { params: { query } })
+    return data.slice(0, 20).map((item) => ({ label: item.book_name_original, value: item.book_id }))
+  }
 
   return (
     <main className="flex flex-col justify-center items-center ">
